@@ -24,9 +24,9 @@
             return;
         }
 
-        draw(0, -len, len*0.97, angle-1923, branchWidth*0.85);
-        draw(0, -len, len*0.8, angle+1234, branchWidth*0.85);
+        draw(0, -len, len*0.9, angle-5, branchWidth*0.82);
+        draw(0, -len, len*0.91, angle+5, branchWidth*0.82);
 
          ctx.restore();
     }
-    draw(400, 600, 120, 0, 10) 
+    draw(400, 700, 120, 0, 10) 
