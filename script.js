@@ -1,18 +1,33 @@
 
-$('#r-w-branch').val()
-$('#r-l-branch').val()
-$('#r-a-branch').val()
 
 
-$('#l-w-branch').val()
-$('#l-l-branch').val()
-$('#l-a-branch').val()
+
+$("#render").click(() => {
+
+    
+let rightBranchWidth = $('#r-w-branch').val()
+let rightBranchLength = $('#r-l-branch').val()
+let rightBranchAngle = $('#r-a-branch').val()
 
 
-$('#rotate').val()
-$('#matrix').val()
-$('#iterations').val()
+let leftBranchWidth = $('#l-w-branch').val()
+let leftBranchLength = $('#l-l-branch').val()
+let leftBranchAngle = $('#l-a-branch').val()
 
+
+let rotate = $('#rotate').val()
+// let matrix = $('#matrix').val()
+// let iteration = $('#iterations').val()
+
+
+console.log('rbw ' + rightBranchWidth)
+console.log('rbl ' + rightBranchLength)
+console.log('rba ' + rightBranchAngle)
+console.log('lbw ' + leftBranchWidth)
+console.log('lbl ' + leftBranchLength)
+console.log('lba ' + leftBranchAngle)
+console.log('rotate ' + rotate )
+console.log()
 
     var myCanvas = document.getElementById("my_canvas");
     var ctx = myCanvas.getContext("2d");
@@ -26,7 +41,7 @@ $('#iterations').val()
         ctx.fillStyle = "green";
 
         ctx.translate(startX, startY);
-        ctx.rotate(angle * Math.PI/300);
+        ctx.rotate(angle * Math.PI/rotate);
         ctx.moveTo(0, 0);
         ctx.lineTo(0, -len);
         ctx.stroke();
@@ -39,9 +54,14 @@ $('#iterations').val()
             return;
         }
 
-        draw(0, -len, len*0.82, angle-45, branchWidth*0.82);
-        draw(0, -len, len*0.82, angle+45, branchWidth*0.82);
+        draw(0, -len, len*rightBranchLength, angle-rightBranchAngle, branchWidth*rightBranchWidth);
+        //console.log(draw(0, -len, len*rightBranchLength, angle-rightBranchAngle, branchWidth*rightBranchWidth))
+        draw(0, -len, len*leftBranchLength, angle+leftBranchAngle, branchWidth*leftBranchWidth);
+        // draw(0, -len, len*0.82, angle-45, branchWidth*0.82);
+        // draw(0, -len, len*0.82, angle+45, branchWidth*0.82);
 
          ctx.restore();
     }
-    draw(400, 700, 120, 0, 10) 
+    draw(400, 600, 120, 0, 10) 
+
+})
