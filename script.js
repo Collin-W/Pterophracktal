@@ -54,9 +54,9 @@ console.log()
             return;
         }
 
-        draw(0, -len, len*rightBranchLength, angle-rightBranchAngle, branchWidth*rightBranchWidth);
-        //console.log(draw(0, -len, len*rightBranchLength, angle-rightBranchAngle, branchWidth*rightBranchWidth))
-        draw(0, -len, len*leftBranchLength, angle+leftBranchAngle, branchWidth*leftBranchWidth);
+        draw(0, -len, len* parseFloat(rightBranchLength), angle- parseFloat(rightBranchAngle), branchWidth* parseFloat(rightBranchWidth))
+        //console.log(draw(0, -len, len* parseFloat( rightBranchLength, angle- parseFloat( rightBranchAngle, branchWidth* parseFloat( rightBranchWidth))
+        draw(0, -len, len*  parseFloat(rightBranchLength), angle+  parseFloat(rightBranchAngle), branchWidth*  parseFloat(rightBranchWidth))
         // draw(0, -len, len*0.82, angle-45, branchWidth*0.82);
         // draw(0, -len, len*0.82, angle+45, branchWidth*0.82);
 
