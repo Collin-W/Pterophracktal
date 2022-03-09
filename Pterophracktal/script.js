@@ -68,8 +68,20 @@ console.log(myCanvas)
 
          ctx.restore();
     }
-    // draw(200, 200, 0, 0, 0) 
-    draw(670, 800, 150, 0, 0) 
+
+    console.log(screen.width + ' widow width')
+    if(screen.width <= 375){
+        console.log('phone detected')
+        draw(350, 950, 120, 0, 0)
+    } else {
+        //assume it is desktop
+        draw(670, 800, 150, 0, 0)
+    }
+
+    
+    
+    // draw(350, 950, 120, 0, 0) // works on 375px width mobile screens 
+    // draw(670, 800, 150, 0, 0) //works on desktop
     // draw(400, 600, 120, 0, 10) 
 
 })
