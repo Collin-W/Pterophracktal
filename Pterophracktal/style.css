@@ -1,0 +1,52 @@
+#fractal-wrapper{
+    /* width="1000" height="800" */
+/*     
+    /* display: flex;
+    justify-content: space-around; */
+    text-align: center; 
+    /* width: 500px; */
+    height:1000px;
+    margin: 0px auto;
+    /* border: 1px solid red; */
+    padding: 5%;
+    
+}
+#my_canvas{
+
+    position: absolute; 
+	width: 1000px; 
+	height: 1000px; 
+	left: 40%; 
+	top: 20%; 
+	margin-left: -300px; /* This is half the width */ 
+	margin-top: -200px; /* This is half the height */
+    
+  display: flex;
+    /* max-width: 90%;
+    max-height: 90%;
+    text-align: center; */
+}
+
+
+#control-panel{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#right-controls {
+    
+}
+
+#left-controls {
+    
+}
+
+#mid-controls {
+    
+}
+
+.container-style{
+    border-radius: 15px;
+    border: 2px solid black;
+}
