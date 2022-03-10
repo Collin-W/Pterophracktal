@@ -69,12 +69,45 @@ console.log(myCanvas)
          ctx.restore();
     }
 
+
+
+    // draw(a, b, c, d, e) //params
+    // a- moves canvas left and right  a-100==moveLeft a+100==moveRight
+    // b- moves canvas up and down  b-100==moveUp b+100==moveDown
+    // c- scales the canvas  c-100==smallerCanvas c+100==largerCanvas
+    // d- effects the shape/ curls  d-100==curlLeft d+100==curlRight
+    // e- thickness of canvas stroke  e-100==thinStroke e+100==thickStroke
+
     console.log(screen.width + ' widow width')
     if(screen.width <= 375){
+        //
         console.log('phone detected')
         draw(350, 950, 120, 0, 0)
-    } else {
-        //assume it is desktop
+    }
+    // if(screen.width <= 410){
+    //     console.log('large phone detected')
+    //     draw(350, 950, 120, 0, 0)
+    // }
+    
+    // if(screen.width <= 410){
+    //     console.log('large phone detected')
+    //     draw(350, 950, 120, 0, 0)
+    // }
+
+    else if(screen.width <= 768){
+        //
+        console.log('tablet detected')
+        draw(350, 700, 120, 0, 0)
+    }
+    else if(screen.width <= 992){
+        //
+        console.log('small desktop detected')
+        draw(350, 700, 100, 0, 0)
+    }
+
+    else  {
+        //
+        console.log('desktop detected')
         draw(670, 800, 150, 0, 0)
     }
 
